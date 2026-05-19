@@ -26,5 +26,5 @@ pm.test("Response body has id", () => {
 });
 
 pm.test("Response body has first_name", () => {
-    pm.expect(jsonBody).to.have.property("first_name").that.equals(expected.first_name);
+    pm.expect(jsonBody.first_name).to.eql(expected.first_name);
 });
