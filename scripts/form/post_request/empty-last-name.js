@@ -12,8 +12,8 @@ pm.test("Response contains detail as an array of errors", () => {
     pm.expect(jsonBody.detail).to.have.lengthOf.at.least(1);
 });
 
-pm.test("Error concerns first_name field and is of type string_too_short", () => {
-    const error = jsonBody.detail.find(err => err.loc.includes("first_name"));
+pm.test("Error concerns last_name field and is of type string_too_short", () => {
+    const error = jsonBody.detail.find(err => err.loc.includes("last_name"));
     
     pm.expect(error).to.exist;
     pm.expect(error.type).to.eql("string_too_short");
