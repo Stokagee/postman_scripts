@@ -18,5 +18,5 @@ pm.test("Error concerns first_name field and is of type string_too_short", () =>
     pm.expect(error).to.exist;
     pm.expect(error.type).to.eql("string_too_short");
     pm.expect(error.ctx.min_length).to.eql(1);
-    pm.expect(error.msg.).to.eql("String should have at least 1 character");
+    pm.expect(error.msg).to.eql("String should have at least 1 character");
 });
